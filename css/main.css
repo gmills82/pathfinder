@@ -7,9 +7,32 @@
 .content {
 	clear: both;
 }
+.content .container-fluid {
+	margin: 0;
+	padding: 0;
+}
+.container-fluid .sidebar {
+	width: 34%;
+	margin-right: 3%;
+	float: left;
+}
+.container-fluid .mainbar {
+	float: left;
+}
 .index-hero h1 {
 	margin-bottom: 25px;
 }
-form#step-one input[type="text"] {
-	width: 300px;
+form#step-one input[type="text"],
+form#step-two input[type="text"] {
+	display: block;
+	width: 90%;
+	margin-bottom: 11px;
+}
+form#step-one button.btn {
+	display:block;
+}
+#creator-map {
+	width: 63%;
+	height: 350px;
+	margin-top: 13px;
 }

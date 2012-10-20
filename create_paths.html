@@ -21,13 +21,35 @@
 			<div class="content">
 				<h1>Create your path</h1>
 				<p>Follow these steps to quickly capture your path and everything along the way</p>
-				<form id="step-one">
-					<legend>1. Where does your path start?</legend>
-					<input type="text" placeholder="Enter a location, address, or GPS coordinate..." />
-					<button type="Submit" class="btn btn-success">Continue</button>
-				</form>
+				<div class="container-fluid">
+					<div class="row-fluid">
+						<div class="sidebar">
+							<form id="step-one">
+								<legend>1. Where does your path start?</legend>
+								<input type="text" placeholder="Enter a location, address, or GPS coordinate..." />
+								<button type="Submit" class="btn btn-success">Continue</button>
+							</form>
+							<form id="step-two">
+								<legend>2. Where does your path end?</legend>
+								<input type="text" placeholder="Enter a location, address, or GPS coordinate..." />
+								<label class="checkbox">Does it end where it started?<input type="checkbox" /></label>
+								<button type="Submit" class="btn btn-success">Continue</button>
+							</form>
+						</div>
+						<div class="mainbar" id="creator-map">Blah Blah Blah</div>
+					</div>
+				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDa0V-FLztuo7YxP2VmLA5PGQDAD5xn258&sensor=true"></script>
         <script src="js/jquery-1.8.2.js"></script>
+        <script type="text/javascript">
+			var mapOptions = {
+				center: new google.maps.LatLng(-34.397, 150.644),
+				zoom: 8,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("creator-map"), mapOptions);
+    </script>
     </body>
 </html>
