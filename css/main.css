@@ -1,0 +1,15 @@
+.nav {
+	margin-top: 15px;
+}
+.container {
+	width: 960px;
+}
+.content {
+	clear: both;
+}
+.index-hero h1 {
+	margin-bottom: 25px;
+}
+form#step-one input[type="text"] {
+	width: 300px;
+}

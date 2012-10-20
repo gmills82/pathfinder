@@ -7,23 +7,25 @@
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <title>Pathfinder - Find your path</title>
-        <meta name="description" content="A site for creating paths in the world." />
+        <meta name="description" content="Create a custom path to be shared with the world" />
         <meta name="viewport" content="width=device-width" />        			<link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
     	<div class="container">
 			<ul class="nav nav-pills pull-right">
-				<li class="active"><a href="index.html">Home</a>
-				<li><a href="create_paths.html">Create a Path</a></li>
+				<li><a href="index.html">Home</a>
+				<li class="active"><a href="create_paths.html">Create a Path</a></li>
 				<li><a href="view_paths.html">View Paths</a>
 			</ul>
-			<div class="hero-unit index-hero">
-				<h1>Find your path</h1>
-				<p>
-				<a href="create_paths.html" class="btn btn-primary">Create a Path</a>
-				<a href="view_paths.html" class="btn btn-success">View Paths</a>
-				</p>
+			<div class="content">
+				<h1>Create your path</h1>
+				<p>Follow these steps to quickly capture your path and everything along the way</p>
+				<form id="step-one">
+					<legend>1. Where does your path start?</legend>
+					<input type="text" placeholder="Enter a location, address, or GPS coordinate..." />
+					<button type="Submit" class="btn btn-success">Continue</button>
+				</form>
 			</div>
 		</div>
         <script src="js/jquery-1.8.2.js"></script>
