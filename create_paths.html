@@ -44,9 +44,22 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA8Q71GyPF_LPG60eqNjuA61oazjsvhiYI&sensor=true"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDx3XInV4h9i6S8ynR4NXwmsG0b4B295Yo&sensor=true"></script>
         <script type="text/javascript">
-			Path.Map.createMap(document.getElementById('creator-map'));
+			var map = Path.Map.createMap(document.getElementById('creator-map'));
+			Path.Map.geocoder = new google.maps.Geocoder();
+			Path.Map.geocoder.geocode({
+				'address': '11798 Violet Dr, Boise, ID'
+			}, function (results, status) {
+				map.panTo(results[0].geometry.location);
+				map.setZoom(12);
+				Path.Map.createMarker({
+					'position': results[0].geometry.location,
+					'map': map,
+					'title': 'Path start'
+				});
+			});
+
     	</script>
     </body>
 </html>

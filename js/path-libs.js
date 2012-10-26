@@ -11,16 +11,16 @@ Path.Map.createMap = function(ele, mapOptions) {
 	var map = new google.maps.Map(ele, finalMapOptions);
 	return map;
 };
-Path.Map.geocode = function (address, success) {
-	$.ajax({
-		url: 'http://maps.googleapis.com/maps/api/geocode/json?address=' + address,
-		method: 'GET',
-		dataType: 'jsonp',
-		error: function(xhr, status, errorThrown) {
-			if("console" in window) {
-				console.log('Error:',status,errorThrown,xhr);
-			}
-		},
-		success: success
-	});
-}
+
+Path.Map.createMarker = function (markerOptions) {
+	var options = _.extend({
+		'draggable': true,
+		'animation': google.maps.Animation.DROP
+	}, markerOptions),
+		marker;
+
+	if(options.position && typeof options.map === 'object'){
+		marker = new google.maps.Marker(options);
+	};
+	return marker;
+};
